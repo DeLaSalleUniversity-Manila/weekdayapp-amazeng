@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:text="This app tells what day the entered date is on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:id="@+id/textViewHeader" />
+
+    <TextView
+        android:text="Enter date:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHeader"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/textViewDay" />
+
+    <TextView
+        android:text="Enter month:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:id="@+id/textViewMonth"
+        android:layout_below="@+id/textViewDay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Enter year:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/textViewYear"
+        android:layout_below="@+id/textViewMonth"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_Click"
+        android:text="Get The Day"
+        android:layout_below="@+id/textViewYear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:onClick="onClickCompute" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextDay"
+        android:layout_above="@+id/textViewMonth"
+        android:layout_alignLeft="@+id/button_Click"
+        android:layout_alignStart="@+id/button_Click" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextMonth"
+        android:layout_alignBottom="@+id/textViewMonth"
+        android:layout_alignLeft="@+id/editTextDay"
+        android:layout_alignStart="@+id/editTextDay" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextYear"
+        android:layout_alignBottom="@+id/textViewYear"
+        android:layout_alignLeft="@+id/editTextMonth"
+        android:layout_alignStart="@+id/editTextMonth" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewOut"
+        android:layout_marginTop="42dp"
+        android:singleLine="false"
+        android:layout_below="@+id/button_Click"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" />
+
+</RelativeLayout>
